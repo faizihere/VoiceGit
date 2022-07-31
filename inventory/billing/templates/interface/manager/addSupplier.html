@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing|Manager</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/generalStyle.css' %}">
+</head>
+
+<body>
+    <div class="parent-div">
+        <div class="left-bar">
+            <div class="profile-div">
+                <p>Hi, Manager</p>
+                <a href="logoutAction">Logout</a>
+            </div>
+            <a href="managerDashboard"><div class="dashboard-div">Dashboard</div></a>
+            <a href="productAction"><div class="product-div">Products</div></a>
+            <a href="supplierAction"><div class="supplier-div active">Suppliers</div></a>
+            <div class="customer-div">Customers</div>
+            <div class="income-div">Sales</div>
+            <div class="purchase-div">Purchase</div>
+            <div class="return-div">Returns</div>
+            <div class="reports-div">Reports</div>
+        </div>
+
+        <div class="right-section">
+            {% comment %} <div class="today-supplier-div">Total Suppliers</div>
+            <div class="list-supplier-div">List Suppliers</div>
+            <div class="add-supplier-div"><a href="addSupplier" >Add Suppliers</a></div> {% endcomment %}
+            {% comment %} Brutt Force prevention {% endcomment %}
+            <form action="addSupplier" method="POST">
+                {% csrf_token %}
+                <input type="text" name="supplierName" placeholder="Supplier Name">
+                <input type="text" name="supplierMobile" placeholder="Supplier Mobile">
+                <input type="text" name="companyName" placeholder="Company Name">
+                {{regForm}}
+                <input type="text" name="address" placeholder="Address">
+                <input type="text" name="city" placeholder="City">
+                <input type="text" name="state" placeholder="State">
+                <input type="text" name="postalCode" placeholder="Postal Code">
+                
+                {% comment %} <input type="email" name="email" placeholder="Email"> {% endcomment %}
+                <input type="hidden" name="designation" value="is_branchManager">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

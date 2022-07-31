@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+.parent-div{
+    display: flex;
+    border: 2px solid gray;
+    height: 100vh;
+}
+
+.left-bar{
+    border: 2px solid gray;
+    width: 25%;
+}
+
+.right-section{
+    width: 100%;
+    border: 1px solid blue;
+}
+
+.left-bar div{
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.active{
+    color:red;
+}

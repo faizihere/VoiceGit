@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing|Manager</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/generalStyle.css' %}">
+</head>
+
+<body>
+    <div class="parent-div">
+        <div class="left-bar">
+            <div class="profile-div">
+                <p>Hi, Manager</p>
+                <a href="logoutAction">Logout</a>
+            </div>
+            <a href="managerDashboard"><div class="dashboard-div active">Dashboard</div></a>
+            <a href="productAction"><div class="product-div">Products</div></a>
+            <a href="supplierAction"><div class="supplier-div">Suppliers</div></a>
+            <div class="customer-div">Customers</div>
+            <div class="income-div">Sales</div>
+            <div class="purchase-div">Purchase</div>
+            <div class="return-div">Returns</div>
+            <div class="reports-div">Reports</div>
+        </div>
+
+        <div class="right-section">
+            <div class="today-income-div">Today <br> Income</div>
+            <div class="montly-income-div">Monthly Income</div>
+            <div class="today-expense-div">Today Expense</div>
+            <div class="monthly-expense-div">Monthly Expense</div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
